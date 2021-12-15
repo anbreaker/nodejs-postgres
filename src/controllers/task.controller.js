@@ -4,7 +4,6 @@ import Task from '../models/Task';
 export async function createTask(req, res) {
   try {
     const { name, done, projectid } = req.body;
-    console.log(req.body);
 
     const newTask = await Task.create(
       {
@@ -17,6 +16,7 @@ export async function createTask(req, res) {
     res.json({ message: 'New Task created' });
   } catch (error) {
     console.log(error);
+
     res.status(500).json({
       message: 'Something goes wrong',
       data: {},
@@ -27,11 +27,11 @@ export async function createTask(req, res) {
 export const getTask = async (req, res) => {
   const tasks = await Task.findAll({
     attributes: ['id', 'name', 'done', 'projectid'],
-    order: ['id', 'DESC'],
+    order: [['id', 'DESC']],
   });
 
   res.json({
-    task,
+    tasks,
   });
 };
 
