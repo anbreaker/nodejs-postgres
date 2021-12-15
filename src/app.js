@@ -7,14 +7,14 @@ import taskRoutes from './routes/task.routes';
 // Initializations
 const app = express();
 
+// format json
+app.use(json());
+
 //middlewares
 app.use(morgan('dev'));
 
 // routes
-app.use('api/projects', projectRoutes);
-app.use('api/tasks', taskRoutes);
-
-// format json
-app.use(json());
+app.use('/api/projects', projectRoutes);
+app.use('/api/tasks', taskRoutes);
 
 export default app;
