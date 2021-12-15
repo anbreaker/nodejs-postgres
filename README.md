@@ -16,3 +16,15 @@
    "deliverydate": "2022-10-02"
 }
 ```
+
+# Post Task
+
+- localhost:4000/api/tasks
+
+```
+{
+   "name": "Download an IDE",
+   "done": false,
+   "projectid": 3
+}
+```

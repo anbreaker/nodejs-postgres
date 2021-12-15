@@ -14,13 +14,13 @@ router.post('/', createProject);
 
 router.get('/', getProjects);
 
-// /api/projects/:projectId
+// /api/projects/:projectid
 router.get('/:id', getOneProject);
 
-// /api/projects/:projectId
+// /api/projects/:projectid
 router.put('/:id', updateProject);
 
-// /api/projects/:projectId
+// /api/projects/:projectid
 router.delete('/:id', deleteProject);
 
 export default router;

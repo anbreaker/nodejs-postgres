@@ -16,7 +16,7 @@ IF NOT EXISTS tasks
   name text NOT NULL CHECK
 (name <> ''),
   done BOOLEAN,
-  projectId INTEGER REFERENCES projects
+  projectid INTEGER REFERENCES projects
 (id)
 );
 
@@ -34,17 +34,17 @@ VALUES('Make a Desktop App', 2, 'Using Python', '2022-06-25');
 
 --INSERT tasks data
 INSERT INTO tasks
-  ( name, done, projectId)
+  ( name, done, projectid)
 VALUES('Download VueJs', false, 1);
 
 INSERT INTO tasks
-  ( name, done, projectId)
+  ( name, done, projectid)
 VALUES('Create UI Web', false, 1);
 
 INSERT INTO tasks
-  ( name, done, projectId)
+  ( name, done, projectid)
 VALUES('Download Flask', false, 2);
 
 INSERT INTO tasks
-  ( name, done, projectId)
+  ( name, done, projectid)
 VALUES('Desing UI', false, 2);
